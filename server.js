@@ -22,6 +22,9 @@ app.get('/recipes/:ingredient', function (request, response) {
         const recipesList = []
         for(let racipe of racipesArr){
             const racipeInfo = {
+                title: racipe.title,
+                href: racipe.href,
+                thumbnail: racipe.thumbnail,
                 ingredients :racipe.ingredients
             }
             recipesList.push(racipeInfo)
