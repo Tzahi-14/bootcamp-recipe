@@ -12,8 +12,6 @@ app.get('/sanity', function (request, response) {
 })
 app.get('/recipes/:ingredient', function (request, response) {
     let ingredient = request.params.ingredient
-    console.log(ingredient)
-
     urllib.request(`https://recipes-goodness.herokuapp.com/recipes/${ingredient}`, function (err, data, res) {
         if (err) {
             throw err;
